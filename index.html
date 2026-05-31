@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>今天吃什么</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #fff3e0, #ffe0e0);
+      font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+    }
+
+    .card {
+      width: 86%;
+      max-width: 420px;
+      padding: 32px 24px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .food {
+      min-height: 64px;
+      margin: 24px 0;
+      font-size: 36px;
+      font-weight: bold;
+      color: #e65100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 999px;
+      background: #ff7043;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.97);
+      background: #f4511e;
+    }
+
+    .tip {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>今天吃什么？</h1>
+    <div id="food" class="food">点一下开始</div>
+    <button onclick="randomFood()">随机一个</button>
+    <div class="tip">选择困难症专用</div>
+  </div>
+
+  <script>
+    const foods = [
+      "猪脚饭",
+      "黄焖鸡米饭",
+      "兰州拉面",
+      "脆皮鸡拌饭",
+      "烤肉拌饭",
+      "芝士焗饭",
+      "麻辣烫",
+      "麻辣香锅",
+      "热干面",
+      "煲仔饭",
+      "螺蛳粉",
+      "桂林米粉",
+      "重庆小面",
+      "炸酱面",
+      "鸭血粉丝汤",
+      "锅盔",
+      "沙县小吃",
+      "鸡蛋灌饼",
+      "港式烧腊饭",
+      "卤肉饭",
+      "咖喱饭",
+      "照烧鸡腿饭",
+      "酸菜鱼",
+      "肥肠粉",
+      "关东煮",
+      "汉堡套餐",
+      "披萨",
+      "意面",
+      "轻食沙拉",
+      "紫菜包饭",
+      "鸡蛋肉汉堡",
+      "韩式炸鸡",
+      "石锅拌饭",
+      "鸡公煲",
+      "冒菜",
+      "羊肉粉",
+      "小笼包",
+      "板面",
+      "藤椒鸡饭",
+      "梅菜扣肉饭",
+      "番茄炒蛋",
+      "鱼香肉丝",
+      "宫保鸡丁",
+      "糖醋里脊",
+      "地三鲜",
+      "炒面",
+      "拌面",
+      "馄饨",
+      "饺子",
+      "包子",
+      "大蔬菜",
+      "烧麦",
+      "煎饼果子",
+      "手抓饼",
+      "酱香饼",
+      "鸭腿饭",
+      "酸辣粉",
+      "担担面",
+      "牛肉粉",
+      "酸辣米线",
+      "减脂餐",
+      "蒸肠粉",
+      "牛杂汤",
+      "羊杂汤",
+      "小龙虾",
+      "毛血旺",
+      "土豆粉",
+      "炒河粉",
+      "肉夹馍",
+      "驴肉火烧",
+      "水煎包",
+      "胡辣汤"
+    ];
+
+    function randomFood() {
+      const index = Math.floor(Math.random() * foods.length);
+      document.getElementById("food").textContent = foods[index];
+    }
+
+    randomFood();
+  </script>
+</body>
+</html>
